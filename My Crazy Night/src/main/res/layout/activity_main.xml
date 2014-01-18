@@ -3,6 +3,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar"
     tools:context="com.epicdynasty.mycrazynight.MainActivity"
     tools:ignore="MergeRootFrame"
     android:background="#fdad20" >
@@ -16,4 +17,15 @@
         android:layout_gravity="center"
         android:fontFamily="sans-serif-thin"
         android:textSize="50dp" />
+
+    <Button
+        android:layout_width="303dp"
+        android:layout_height="81dp"
+        android:text="Enter the Crazy"
+        android:id="@+id/button"
+        android:onClick="sendMessage"
+        android:layout_gravity="center_horizontal|bottom"
+        android:clickable="true"
+        android:background="#00000000" />
+
 </FrameLayout>

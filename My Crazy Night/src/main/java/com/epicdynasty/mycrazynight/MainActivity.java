@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.content.Intent;
 import com.facebook.*;
 import com.facebook.model.*;
+import android.view.View;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -51,10 +52,12 @@ public class MainActivity extends ActionBarActivity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+        android.app.ActionBar actionBar = getActionBar();
+        actionBar.setDisplayOptions(actionBar.getDisplayOptions() ^ ActionBar.DISPLAY_SHOW_TITLE);
 
     }
 
-
+/**
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         
@@ -74,7 +77,7 @@ public class MainActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
+*/
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -96,5 +99,13 @@ public class MainActivity extends ActionBarActivity {
     public void onActivityResult (int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         Session.getActiveSession().onActivityResult(this, requestCode, resultCode, data);
+    }
+
+    /** Called when the user clicks the Send button */
+    public void sendMessage (View view) {
+        // Do something in response to button
+
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 }
