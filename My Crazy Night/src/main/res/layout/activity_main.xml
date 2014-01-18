@@ -4,4 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.epicdynasty.mycrazynight.MainActivity"
-    tools:ignore="MergeRootFrame" />
+    tools:ignore="MergeRootFrame"
+    android:background="#fdad20" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="My Crazy Night"
+        android:id="@+id/textView"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="50dp" />
+</FrameLayout>
